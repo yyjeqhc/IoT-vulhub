@@ -1,4 +1,6 @@
 FROM firmianay/qemu-system:armel
+ARG HTTP_PROXY
+ARG HTTPS_PROXY
 LABEL Author="firmianay@gmail.com"
 
 WORKDIR /root

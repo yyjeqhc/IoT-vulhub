@@ -1,4 +1,6 @@
 FROM ubuntu:16.04
+ARG HTTP_PROXY
+ARG HTTPS_PROXY
 LABEL Author="firmianay@gmail.com"
 ARG MISE
 

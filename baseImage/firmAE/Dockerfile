@@ -1,4 +1,6 @@
 FROM firmianay/binwalk:noentry
+ARG HTTP_PROXY
+ARG HTTPS_PROXY
 
 WORKDIR /root
 

@@ -1,1 +1,19 @@
 *.DS_Store
+# 忽略提取后的固件目录
+HUAWEI/CVE-2017-17215/firmware/*.extracted/
+TP-Link/CVE-2017-13772/firmware/*.extracted/
+TP-Link/CVE-2020-8423/firmware/*.extracted/
+VIVOTEK/remote_stack_overflow/firmware/*.extracted/
+
+# 忽略 tools 目录下的可执行文件
+HUAWEI/CVE-2017-17215/system-emu/tools/
+TP-Link/CVE-2017-13772/system-emu/tools/
+VIVOTEK/remote_stack_overflow/system-emu/tools/
+
+# 忽略 QEMU 镜像和内核文件
+baseImage/qemu-system/**/images/*.qcow2
+baseImage/qemu-system/**/images/initrd.img-*
+baseImage/qemu-system/**/images/vmlinuz-*
+baseImage/qemu-system/**/images/vmlinux-*
+
+D-Link/CVE-2019-17621/firmware/_DIR822A1_FW103WWb03.bin.extracted/*

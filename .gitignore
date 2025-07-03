@@ -17,3 +17,14 @@ baseImage/qemu-system/**/images/vmlinuz-*
 baseImage/qemu-system/**/images/vmlinux-*
 
 D-Link/CVE-2019-17621/firmware/_DIR822A1_FW103WWb03.bin.extracted/*
+
+# 忽略所有以 .extracted 结尾的固件提取目录
+**/*.extracted/
+
+# 忽略所有系统模拟相关的目录 (system-emu, firmae-emu)
+# 这将同时忽略其中的 busybox, gdbserver, msf 等工具
+**/system-emu/
+**/firmae-emu/
+
+# 忽略特定的 Docker 配置文件
+**/docker-compose-firmae.yml

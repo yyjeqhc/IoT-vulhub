@@ -1,6 +1,10 @@
 FROM firmianay/ubuntu1604
 ARG HTTP_PROXY
 ARG HTTPS_PROXY
+ENV HTTP_PROXY=${HTTP_PROXY}
+ENV HTTPS_PROXY=${HTTPS_PROXY}
+ENV http_proxy=${HTTP_PROXY}
+ENV https_proxy=${HTTPS_PROXY}
 LABEL Author="firmianay@gmail.com"
 
 WORKDIR /root
@@ -19,5 +23,9 @@ RUN apt-get update \
     && apt-get purge -y --autoremove git wget \
     && rm -rf /var/lib/apt/lists/*
 
+ENV HTTP_PROXY=
+ENV HTTPS_PROXY=
+ENV http_proxy=
+ENV https_proxy=
 # comment it for 'noentry'
 # ENTRYPOINT ["binwalk"]
